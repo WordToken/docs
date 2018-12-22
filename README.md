@@ -1,1 +1,1 @@
-# WordToken Documentation Client
+# Docs
