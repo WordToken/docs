@@ -69,8 +69,15 @@ under the License.
         </div>
         <ul class="search-results"></ul>
       <% end %>
+
+
       <ul id="toc" class="toc-list-h1">
+        <div class="doc-label">Topics</div>
+
         <% toc_data(page_content).each do |h1| %>
+          <% if h1[:title] == 'Interlocutors' %>
+              <div class="doc-label">Core Resources</div>
+            <% end %>
           <li>
             <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:title] %>"><%= h1[:content] %></a>
             <% if h1[:children].length > 0 %>
@@ -85,6 +92,7 @@ under the License.
           </li>
         <% end %>
       </ul>
+
       <% if current_page.data.toc_footers %>
         <ul class="toc-footer">
           <% current_page.data.toc_footers.each do |footer| %>

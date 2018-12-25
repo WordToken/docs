@@ -135,6 +135,11 @@ html, body {
     }
   }
 
+  .doc-label {
+    color: #0099e5;
+    text-transform: uppercase;
+    margin: 5px 15px;
+  }
 
   // The Table of Contents is composed of multiple nested
   // unordered lists.  These styles remove the default
