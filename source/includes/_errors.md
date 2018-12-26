@@ -13,16 +13,13 @@ Generally, the status code will fall under 3 categories:
 4xx for client side errors.</br>
 5xx for errors resulting from servers that host the WordToken API.
 
+## HTTP Status Codes
+
 Error Code | Meaning
 ---------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The resource requested is hidden for administrators only.
-404 | Not Found -- The specified resource could not be found.
-405 | Method Not Allowed -- You tried to access a resource with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+200 | OK: Successful request. 
+400 | Bad Request: Results when using an invalid url syntax.
+401 | Unauthorized: This error will return if a request is made without a developer API key.
+404 | Not Found: You've requested a resource that doesn't or no longer exists.
+429 | Too Many Requests: Requests rates are limited by API Key, this error will be returned if you exceed the limit.
+500+ | Server issues. This is on us.
